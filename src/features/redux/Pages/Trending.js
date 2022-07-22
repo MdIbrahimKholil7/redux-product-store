@@ -4,11 +4,13 @@ import "slick-carousel/slick/slick-theme.css";
 import { useSelector, useDispatch } from 'react-redux'
 import { getProduct } from '../action/getProductAction';
 import Slider from 'react-slick';
+import { useNavigate } from 'react-router-dom'
 const Trending = () => {
     const { products, loading, error } = useSelector(state => state.products)
     const [item, setItem] = useState([])
     const [active, setActive] = useState("men's clothing")
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     console.log(item)
     const settings = {
         infinite: true,
@@ -90,17 +92,17 @@ const Trending = () => {
                         <div className='d-flex gap-5 relative' >
                             <ul className='d-flex gap-5 list-unstyled '>
                                 <li className='li'>
-                                    <button onClick={() => handleProduct("men's clothing")} className={`${active ==="men's clothing"? 'active-btn':''} product-btn `}>Men's</button>
-                                    
+                                    <button onClick={() => handleProduct("men's clothing")} className={`${active === "men's clothing" ? 'active-btn' : ''} product-btn `}>Men's</button>
+
                                 </li>
                                 <li className='li'>
-                                    <button onClick={() => handleProduct("women's clothing")} className={`${active ==="women's clothing"? 'active-btn':''} product-btn `}>Women</button>
+                                    <button onClick={() => handleProduct("women's clothing")} className={`${active === "women's clothing" ? 'active-btn' : ''} product-btn `}>Women</button>
                                 </li>
                                 <li className='li'>
-                                    <button onClick={() => handleProduct('jewelery')} className={`${active ==="jewelery"? 'active-btn':''} product-btn `}>Jewelery</button>
+                                    <button onClick={() => handleProduct('jewelery')} className={`${active === "jewelery" ? 'active-btn' : ''} product-btn `}>Jewelery</button>
                                 </li>
                                 <li className='li'>
-                                    <button onClick={() => handleProduct('electronics')} className={`${active ==="electronics"? 'active-btn':''} product-btn `}>Electronics</button>
+                                    <button onClick={() => handleProduct('electronics')} className={`${active === "electronics" ? 'active-btn' : ''} product-btn `}>Electronics</button>
                                 </li>
                             </ul>
 
@@ -133,7 +135,7 @@ const Trending = () => {
                                     <h5 class="font text-center">{title}</h5>
                                     <p class="card-text text-center fw-bold">${price}</p>
                                     <div className='text-center'>
-                                        <button className='btn bg-dark text-white'>Details</button>
+                                        <button onClick={()=>navigate(`details/${id}`)} className='btn bg-dark text-white'>Details</button>
                                     </div>
                                 </div>
                             </div>
