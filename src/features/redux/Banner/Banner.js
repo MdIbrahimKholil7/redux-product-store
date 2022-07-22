@@ -22,8 +22,19 @@ const Banner = () => {
             <div className='parent'>
                 <Slider {...settings}>
 
-                    <div class="img1">
-
+                    <div class="img1 relative">
+                        <div className='fashion-desc'>
+                            <div>
+                                <h1 className='fashion-font'>Fashion Sale</h1>
+                                <h1 className='font'>Minimal Menz Style</h1>
+                                <div>
+                                    <p className='fs-6'>Consectetur adipisicing elit. Laborum fuga in cidunt laboriosam voluptas iure, delectus dignissimos facilis neque nulla earum.</p>
+                                    <div>
+                                        <button className='btn bg-dark text-white'>Shop Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="img2">
 
