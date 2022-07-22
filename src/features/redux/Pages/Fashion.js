@@ -3,6 +3,7 @@ import img3 from '../../../assets/img3.webp'
 import img4 from '../../../assets/img4.webp'
 import img5 from '../../../assets/img5.webp'
 const Fashion = () => {
+
     return (
         <div className='container'>
             <div className='row g-5 card-parent my-5'>

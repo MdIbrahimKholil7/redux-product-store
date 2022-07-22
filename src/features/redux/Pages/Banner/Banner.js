@@ -3,8 +3,8 @@ import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from '../../../assets/img1.webp'
-import img2 from '../../../assets/img2.webp'
+import img1 from '../../../../assets/img1.webp'
+import img2 from '../../../../assets/img2.webp'
 import { Container } from 'postcss';
 const Banner = () => {
     const settings = {
