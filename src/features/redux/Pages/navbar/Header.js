@@ -22,7 +22,7 @@ const Header = () => {
                                    <Link className='link' to='/'>Home</Link>
                                 </li>
                                 <li className='cursor'>
-                                    <HashLink className='link' smooth to='#product'>
+                                    <HashLink className='link' smooth to='/#product'>
                                         Product
                                     </HashLink>
                                 </li>
