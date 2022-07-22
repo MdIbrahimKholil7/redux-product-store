@@ -35,7 +35,7 @@
     background-image: url('./assets/img1.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: 60%;
+    background-position-x: 55%;
     width: 100vh;
   }
   .img2{
@@ -45,15 +45,47 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-position-x: 32%;
+    background-position-x: 39%;
     width: 100vh;
   }
+  
+
+.fashion-desc{
+  position: absolute;
+  top: 0%;
+  left: 40% !important;
+  transform: translate(-50%,-50%);
+  width: 450px !important;
+  padding: 0 10px;
+  text-align: center;
+ 
+}
+.fashion-desc-2{
+  position: absolute;
+  top: 50%;
+  left: 44% !important;
+  transform: translate(-50%,-50%);
+  width: 450px !important;
+  padding: 0 30px;
+  text-align: center;
+ 
+}
 }
 
 .fashion-desc{
   position: absolute;
   top: 50%;
   left: 27%;
+  transform: translate(-50%,-50%);
+  width: 550px;
+  padding: 0 80px;
+  text-align: center;
+ 
+}
+.fashion-desc-2{
+  position: absolute;
+  top: 50%;
+  left: 70%;
   transform: translate(-50%,-50%);
   width: 550px;
   padding: 0 80px;
