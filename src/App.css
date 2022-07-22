@@ -162,4 +162,13 @@ body {
   margin-bottom: 20px;
 }
 
-
+.shop-card{
+  height: 370px !important;
+ 
+  margin: 0 10px;
+}
+.shop-card img{
+  height: 230px;
+  width: auto;
+  object-fit: cover;
+}
