@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Button } from 'react-bootstrap';
-import Header from './features/redux/navbar/Navbar';
+import Header from './features/redux/Pages/navbar/Header';
 import { Routes,Route } from "react-router-dom";
 import Home from './features/redux/home/Home';
 function App() {

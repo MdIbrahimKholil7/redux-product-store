@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../../assets/logo.webp'
+import logo from '../../../../assets/logo.webp'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 const Header = () => {
     return (
