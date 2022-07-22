@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Pages/Banner/Banner';
 import Fashion from '../Pages/Fashion';
+import Footer from '../Pages/Footer';
 import Trending from '../Pages/Trending';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner/>
             <Fashion/>
             <Trending/>
+            <Footer/>
         </div>
     );
 };

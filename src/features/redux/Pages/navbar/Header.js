@@ -7,6 +7,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../../../assets/logo.webp'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
@@ -14,39 +16,28 @@ const Header = () => {
                 <Navbar bg="light" expand="lg">
                     <Container fluid>
                         <Navbar.Brand href="#"><img src={logo} alt="" /></Navbar.Brand>
-                        <Navbar.Toggle aria-controls="navbarScroll" />
-                        <Navbar.Collapse id="navbarScroll">
-                            <Nav
-                                className="me-auto my-2 my-lg-0"
-                                style={{ maxHeight: '100px' }}
-                                navbarScroll
-                            >
-                                <Nav.Link href="#action1">Home</Nav.Link>
-                                <Nav.Link href="#action2">Link</Nav.Link>
-                                <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action4">
-                                        Another action
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action5">
-                                        Something else here
-                                    </NavDropdown.Item>
-                                </NavDropdown>
-                                <Nav.Link href="#" disabled>
-                                    Link
-                                </Nav.Link>
-                            </Nav>
-                            <Form className="d-flex">
-                                <Form.Control
-                                    type="search"
-                                    placeholder="Search"
-                                    className="me-2"
-                                    aria-label="Search"
-                                />
-                                <Button variant="outline-success">Search</Button>
-                            </Form>
-                        </Navbar.Collapse>
+                        <div>
+                            <ul className='list-unstyled d-flex m-0 gap-5 fw-bold'>
+                                <li className='cursor'>
+                                   <Link className='link' to='/'>Home</Link>
+                                </li>
+                                <li className='cursor'>
+                                    <HashLink className='link' smooth to='#product'>
+                                        Product
+                                    </HashLink>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+
+                            <button type="button" class="btn btn-dark text-white position-relative me-2">
+                                <AiOutlineShoppingCart />
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </button>
+                        </div>
                     </Container>
                 </Navbar>
 
