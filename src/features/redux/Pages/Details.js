@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import singleProductAction from '../action/singleProductAction';
 import { AiFillStar } from 'react-icons/ai';
+import { addToCart } from '../reducer/addProductReducer';
 const Details = () => {
     const { id } = useParams()
     const { loading, item, error } = useSelector(state => state.item)
@@ -11,6 +12,10 @@ const Details = () => {
     useEffect(() => {
         dispatch(singleProductAction(id))
     }, [])
+    const handleCart=(item)=>{
+        dispatch(addToCart(item))
+        
+    }
     return (
         <div>
             {
@@ -28,7 +33,7 @@ const Details = () => {
                                     <p>
                                         {description}
                                     </p>
-                                    <button  className='btn btn-dark'>Add To Cart</button>
+                                    <button onClick={()=>handleCart(item)}  className='btn btn-dark'>Add To Cart</button>
                                 </div>
                             </div>
                         </div>

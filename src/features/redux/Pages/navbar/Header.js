@@ -1,15 +1,14 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
+import { useSelector, useDispatch } from 'react-redux'
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../../../../assets/logo.webp'
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 const Header = () => {
+    const {quantity}=useSelector(state=>state.cartReducer)
+
     return (
         <div>
             <>
@@ -33,8 +32,9 @@ const Header = () => {
                             <button type="button" class="btn btn-dark text-white position-relative me-2">
                                 <AiOutlineShoppingCart />
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
-                                    <span class="visually-hidden">unread messages</span>
+                                    {
+                                        quantity
+                                    }
                                 </span>
                             </button>
                         </div>

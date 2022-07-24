@@ -1,18 +1,33 @@
+import { createSlice } from "@reduxjs/toolkit";
 import { ADD_PRODUCT } from "../type/addProductType";
 
 const initialState = {
-    cart: {},
+    cart: [],
     quantity: 0
 }
 
-const addProductReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case ADD_PRODUCT:
-            return (
-                const item=state.cart.find()
-            )
+const cartSlice = createSlice({
+    name: 'add',
+    initialState,
+    reducers: {
+        addToCart(state, action) {
+            /*  const tempProduct={...action.payload,quantity:1}
+             state.cart.push(tempProduct) */
 
-        default:
-            return state;
+            const index = state.cart.findIndex(item => item.id === action.payload.id)
+            console.log(index)
+            if (index >= 0) {
+                state.cart[index].quantity += 1
+            } else {
+                action.payload.quantity = 1
+                state.cart.push(action.payload)
+                state.quantity = state.cart.length
+            }
+            // console.log(action)
+        }
     }
-}
+})
+
+export const { addToCart } = cartSlice.actions
+
+export default cartSlice.reducer
