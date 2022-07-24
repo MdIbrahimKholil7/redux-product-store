@@ -199,3 +199,8 @@ body {
 .link:hover{
   color: #000;
 }
+.business{
+  background-image: linear-gradient(to right top, #3a4659, #2d3a55, #242e51, #1d224b, #191544);
+  padding: 90px 60px;
+  color: white;
+}

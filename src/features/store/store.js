@@ -13,5 +13,5 @@ const rootStore=combineReducers({
     cartReducer
 })
 
-const store=createStore(rootStore,composeWithDevTools(applyMiddleware(thunk,logger)))
+const store=createStore(rootStore,composeWithDevTools(applyMiddleware(thunk,)))
 export default store
