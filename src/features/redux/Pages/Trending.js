@@ -132,7 +132,7 @@ const Trending = () => {
                             <div class="card shop-card">
                                 <img src={image} class="card-img-top" alt="..." />
                                 <div class="card-body mt-2">
-                                    <h5 class="font text-center">{title}</h5>
+                                    <h5 class="font-size text-center">{title}</h5>
                                     <p class="card-text text-center fw-bold">${price}</p>
                                     <div className='text-center'>
                                         <button onClick={()=>navigate(`details/${id}`)} className='btn bg-dark text-white'>Details</button>
