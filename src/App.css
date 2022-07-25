@@ -109,6 +109,7 @@ body {
 .font {
   font-family: "Jost", sans-serif;
   font-weight: 700;
+  font-size: 32px !important;
 }
 
 .card-parent {
